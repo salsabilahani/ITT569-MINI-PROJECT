@@ -1,0 +1,11 @@
+{
+  "name": "Custom TDS Sensor",
+  "pins": [
+    { "name": "GND", "type": "power" },
+    { "name": "VCC", "type": "power" },
+    { "name": "AOUT", "type": "analog", "direction": "output" }
+  ],
+  "behavior": {
+    "onTick": "AOUT.value = Math.sin(time / 1000) * 512 + 512;"
+  }
+}
